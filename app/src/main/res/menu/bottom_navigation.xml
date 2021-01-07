@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstFragment"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/secondFragment"
+        android:title="Favoritos"
+        android:icon="@drawable/ic_fav" />
+
+    <item
+        android:id="@+id/thirdFragment"
+        android:title="Agenda"
+        android:icon="@drawable/ic_calendar" />
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:title="Perfil"
+        android:icon="@drawable/ic_user" />
+</menu>
