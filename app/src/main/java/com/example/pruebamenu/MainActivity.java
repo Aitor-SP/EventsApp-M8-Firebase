@@ -10,10 +10,11 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.NavHostController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -76,4 +77,15 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragmentcontainer, fragment);
         transaction.commit();
     }
+    // Para no volver atras
+    @Override
+    public void onBackPressed(){
+    }
+
+    //Para ocultar el teclado
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
+    }
+
 }

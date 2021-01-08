@@ -14,7 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"
+        android:onClick="hideKeyboard"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
