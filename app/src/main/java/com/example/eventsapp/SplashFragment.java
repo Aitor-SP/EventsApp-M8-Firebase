@@ -1,4 +1,4 @@
-package com.example.pruebamenu;
+package com.example.eventsapp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import com.bumptech.glide.Glide;
-import com.example.pruebamenu.databinding.FragmentSplash2Binding;
+import com.example.eventsapp.databinding.FragmentSplash2Binding;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 

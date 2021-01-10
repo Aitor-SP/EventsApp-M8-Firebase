@@ -1,4 +1,4 @@
-package com.example.pruebamenu;
+package com.example.eventsapp;
 
 import android.os.Bundle;
 
