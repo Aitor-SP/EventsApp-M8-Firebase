@@ -2,27 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".IniciarSesionFragment"
     tools:layout_editor_absoluteY="25dp">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto"
         android:text="@string/login"
         android:textColor="#000000"
@@ -30,7 +20,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -48,21 +38,21 @@
         android:id="@+id/buttonic"
         android:layout_width="328dp"
         android:layout_height="55dp"
-        android:layout_marginTop="524dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/roboto"
         android:text="@string/iniciar_sesi_n"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <TextView
         android:id="@+id/crearcuenta"
         android:layout_width="88dp"
         android:layout_height="18dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="30dp"
         android:clickable="true"
         android:contextClickable="false"
         android:fontFamily="@font/roboto"
@@ -71,15 +61,15 @@
         android:textColor="#EB5757"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonic" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="328dp"
         android:layout_height="66dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="40dp"
         android:autofillHints=""
         android:background="@drawable/eml_bg"
         android:ems="10"
@@ -94,25 +84,25 @@
         android:textColorLink="#EB5757"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto"
         android:text="@string/no_tienes_una_cuenta"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonic" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="328dp"
         android:layout_height="66dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:autofillHints=""
         android:background="@drawable/eml_bg"
         android:ems="10"
@@ -122,29 +112,29 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto"
         android:text="@string/bienvenido_de_nuevo"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="229dp"
         android:layout_height="92dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/logoiniciosesion"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/logoiniciosesion" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
