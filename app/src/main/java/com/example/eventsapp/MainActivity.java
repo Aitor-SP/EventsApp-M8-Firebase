@@ -87,4 +87,5 @@ public class MainActivity extends AppCompatActivity {
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(),0);
     }
 
+
 }

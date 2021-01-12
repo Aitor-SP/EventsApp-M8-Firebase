@@ -22,7 +22,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E5E5E6"
-                android:elevation="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,22 +32,21 @@
                 android:layout_width="29dp"
                 android:layout_height="29dp"
                 android:layout_marginStart="130dp"
-                android:elevation="8dp"
                 android:src="@drawable/user_circle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/rojo_events" />
+                app:tint="@color/rojo_events"
+                android:contentDescription="@string/logoperfil" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="168dp"
-                android:elevation="8dp"
                 android:fontFamily="@font/roboto"
-                android:text="Perfil"
+                android:text="@string/perfil"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold"
@@ -70,7 +68,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintVertical_bias="0.182"
+        android:contentDescription="@string/imagenperfil" />
 
     <TextView
         android:id="@+id/textView7"
@@ -79,7 +78,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="350dp"
         android:fontFamily="@font/roboto"
-        android:text="AITOR SANCHO"
+        android:text="@string/aitor_sancho"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -97,7 +96,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="#EB5757" />
+        app:tint="#EB5757"
+        android:contentDescription="@string/logoperfil1" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -108,7 +108,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="#EB5757" />
+        app:tint="#EB5757"
+        android:contentDescription="@string/logomail" />
 
     <TextView
         android:id="@+id/textView12"
@@ -117,7 +118,7 @@
         android:layout_marginStart="182dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="172dp"
-        android:text="aitorsp@elpuig.xeill.net"
+        android:text="@string/aitorsp_elpuig_xeill_net"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +132,7 @@
         android:layout_marginStart="178dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="176dp"
-        android:text="AitorSP"
+        android:text="@string/aitorsp"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,10 +143,11 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Permitir notificaciones                                              "
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -157,6 +159,22 @@
         android:src="@drawable/divisor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:contentDescription="@string/barraseparadora" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/permitir_notificaciones"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

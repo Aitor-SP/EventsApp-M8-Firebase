@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E5E5E6"
-                android:elevation="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,22 +34,21 @@
                 android:layout_width="29dp"
                 android:layout_height="29dp"
                 android:layout_marginStart="96dp"
-                android:elevation="8dp"
                 android:src="@drawable/ic_calendar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/rojo_events" />
+                app:tint="@color/rojo_events"
+                android:contentDescription="@string/icagenda" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="148dp"
-                android:elevation="8dp"
                 android:fontFamily="@font/roboto"
-                android:text="Agenda"
+                android:text="@string/agenda"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold"
@@ -58,30 +56,39 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/black"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
     <CalendarView
-        android:id="@+id/calendarView2"
-        android:layout_width="410dp"
-        android:layout_height="397dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
+        android:id="@+id/calendarView"
+        android:layout_width="411dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        android:contentDescription="@string/barraseparadora1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.40000000" />
+        app:layout_constraintVertical_bias="0.40000000"
+        android:contentDescription="@string/logosplash" />
 
     <ImageView
         android:id="@+id/carga"
@@ -30,6 +31,7 @@
         app:layout_constraintBottom_toBottomOf="@id/logo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/gifsplash" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
