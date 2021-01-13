@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
 public class RegistroFragment extends Fragment {
 
     Button btncrear,btnback;
@@ -33,20 +32,12 @@ public class RegistroFragment extends Fragment {
         navController = Navigation.findNavController(view);
         btncrear = view.findViewById(R.id.buttoncc);
 
-        btncrear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.action_registroFragment_to_firstFragment22);
-            }
-        });
+        btncrear.setOnClickListener(v -> navController.navigate(R.id.action_registroFragment_to_firstFragment22));
 
         btnback = view.findViewById(R.id.backlogin);
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar al login de nuevo al pulsar en el boton Login(back)
-                navController.navigate(R.id.action_registroFragment_to_iniciarSesionFragment3);
-            }
+        btnback.setOnClickListener(v -> {
+            // Navegar al login de nuevo al pulsar en el boton Login(back)
+            navController.navigate(R.id.action_registroFragment_to_iniciarSesionFragment3);
         });
     }
 }

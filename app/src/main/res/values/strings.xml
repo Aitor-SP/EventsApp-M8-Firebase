@@ -38,4 +38,8 @@
     <string name="nombre">Nombre</string>
     <string name="crear_cuenta_boton">Crear cuenta</string>
     <string name="logoregistro">logoregistro</string>
+    <string name="ichelp">ichelp</string>
+    <string name="logohelp">logohelp</string>
+    <string name="versi_n_1_0">VERSIÓN: 1.0</string>
+    <string name="autor_aitor_sancho">AUTOR: Aitor Sancho</string>
 </resources>
