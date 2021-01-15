@@ -1,82 +1,39 @@
 package com.example.eventsapp;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
-import androidx.navigation.NavOptions;
-import androidx.navigation.fragment.NavHostFragment;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.navigation.ui.NavigationUI;
+import com.example.eventsapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    FirstFragment firstFragment = new FirstFragment();
-    SecondFragment secondFragment = new SecondFragment();
-    ThirdFragment thirdFragment = new ThirdFragment();
-    FourthFragment fourthFragment = new FourthFragment();
+    private ActivityMainBinding binding;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentcontainer);
         NavController navController = navHostFragment.getNavController();
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navController);
 
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if(destination.getId() == R.id.splashFragment || destination.getId() == R.id.iniciarSesionFragment || destination.getId() == R.id.registroFragment) {
-                    navigation.setVisibility(View.GONE);
-                } else {
-                    navigation.setVisibility(View.VISIBLE);
-                }
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if(destination.getId() == R.id.splashFragment || destination.getId() == R.id.iniciarSesionFragment || destination.getId() == R.id.registroFragment) {
+                binding.bottomNavigation.setVisibility(View.GONE);
+            } else {
+                binding.bottomNavigation.setVisibility(View.VISIBLE);
             }
         });
     }
 
-    private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()){
-                case R.id.firstFragment:
-                    loadFragment(firstFragment);
-                    return true;
-
-                case R.id.secondFragment:
-                    loadFragment(secondFragment);
-                    return true;
-
-                case R.id.thirdFragment:
-                    loadFragment(thirdFragment);
-                    return true;
-
-                case R.id.fourthFragment:
-                    loadFragment(fourthFragment);
-                    return true;
-            }
-            return false;
-        }
-    };
-
-    public void loadFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragmentcontainer, fragment);
-        transaction.commit();
-    }
     // Para no volver atras
     @Override
     public void onBackPressed(){

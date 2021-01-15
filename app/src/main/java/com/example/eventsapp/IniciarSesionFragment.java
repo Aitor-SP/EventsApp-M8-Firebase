@@ -33,21 +33,15 @@ public class IniciarSesionFragment extends Fragment {
         navController = Navigation.findNavController(view);
 
         final TextView registro = view.findViewById(R.id.crearcuenta);
-        registro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a registro al clicar en el texto crear cuenta
-                navController.navigate(R.id.action_iniciarSesionFragment_to_registroFragment2);
-            }
+        registro.setOnClickListener(v -> {
+            // Navegar a registro al clicar en el texto crear cuenta
+            navController.navigate(R.id.action_iniciarSesionFragment_to_registroFragment);
         });
 
         btniniciarsesion = view.findViewById(R.id.buttonic);
-        btniniciarsesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navegar a home/novedades al clickar en iniciar sesion
-                navController.navigate(R.id.action_iniciarSesionFragment_to_firstFragment22);
-            }
+        btniniciarsesion.setOnClickListener(v -> {
+            // Navegar a home/novedades al clickar en iniciar sesion
+            navController.navigate(R.id.action_iniciarSesionFragment_to_firstFragment);
         });
     }
 }

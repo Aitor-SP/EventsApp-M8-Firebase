@@ -6,17 +6,17 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/firstFragment2"
+        android:id="@+id/firstFragment"
         android:name="com.example.eventsapp.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
     <fragment
-        android:id="@+id/secondFragment2"
+        android:id="@+id/secondFragment"
         android:name="com.example.eventsapp.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
     <fragment
-        android:id="@+id/thirdFragment2"
+        android:id="@+id/thirdFragment"
         android:name="com.example.eventsapp.ThirdFragment"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
@@ -39,14 +39,14 @@
         android:label="fragment_iniciar_sesion"
         tools:layout="@layout/fragment_iniciar_sesion" >
         <action
-            android:id="@+id/action_iniciarSesionFragment_to_firstFragment22"
-            app:destination="@id/firstFragment2"
+            android:id="@+id/action_iniciarSesionFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_iniciarSesionFragment_to_registroFragment2"
+            android:id="@+id/action_iniciarSesionFragment_to_registroFragment"
             app:destination="@id/registroFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
@@ -59,14 +59,14 @@
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro" >
         <action
-            android:id="@+id/action_registroFragment_to_firstFragment22"
-            app:destination="@id/firstFragment2"
+            android:id="@+id/action_registroFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_registroFragment_to_iniciarSesionFragment3"
+            android:id="@+id/action_registroFragment_to_iniciarSesionFragment"
             app:destination="@id/iniciarSesionFragment"
             app:enterAnim="@anim/slide_in_left"
             app:exitAnim="@anim/slide_out_right"
@@ -74,7 +74,7 @@
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/fourthFragment2"
+        android:id="@+id/fourthFragment"
         android:name="com.example.eventsapp.FourthFragment"
         android:label="fragment_fourth"
         tools:layout="@layout/fragment_fourth" />

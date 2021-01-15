@@ -32,12 +32,12 @@ public class RegistroFragment extends Fragment {
         navController = Navigation.findNavController(view);
         btncrear = view.findViewById(R.id.buttoncc);
 
-        btncrear.setOnClickListener(v -> navController.navigate(R.id.action_registroFragment_to_firstFragment22));
+        btncrear.setOnClickListener(v -> navController.navigate(R.id.action_registroFragment_to_firstFragment));
 
         btnback = view.findViewById(R.id.backlogin);
         btnback.setOnClickListener(v -> {
             // Navegar al login de nuevo al pulsar en el boton Login(back)
-            navController.navigate(R.id.action_registroFragment_to_iniciarSesionFragment3);
+            navController.navigate(R.id.action_registroFragment_to_iniciarSesionFragment);
         });
     }
 }
