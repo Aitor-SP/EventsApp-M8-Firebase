@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 import com.example.eventsapp.databinding.FragmentFirstBinding;
+import com.example.eventsapp.databinding.FragmentThirdBinding;
 import com.example.eventsapp.databinding.ViewholderEventoBinding;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return FragmentFirstBinding.inflate(inflater, container, false).getRoot();
+        return (binding = FragmentFirstBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -40,8 +41,6 @@ public class FirstFragment extends Fragment {
         EventosAdapter eventosAdapter = new EventosAdapter();
 
         binding.recyclerView.setAdapter(eventosAdapter);
-
-        binding.recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
 
         eventosViewModel.eventos().observe(getViewLifecycleOwner(), new Observer<List<Evento>>() {
             @Override
