@@ -1,5 +1,7 @@
 package com.example.eventsapp;
 
+import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,9 +28,15 @@ public class ThirdFragment extends Fragment {
 
         binding.cosmoCalendar.setSelectionType(SelectionType.MULTIPLE);
 
+        binding.cosmoCalendar.setSelectedDayBackgroundColor(Color.parseColor("#EB5757"));
+
         binding.cosmoCalendar.setFirstDayOfWeek(Calendar.MONDAY);
 
         binding.cosmoCalendar.setCalendarOrientation(0);
+
+        binding.cosmoCalendar.setWeekendDayTextColor(Color.parseColor("#EB5757"));
+
+        binding.cosmoCalendar.setCurrentDayIconRes(R.drawable.ic_triangle_gris);
 
         binding.cosmoCalendar.setWeekendDays(new HashSet(){{
             add(Calendar.SATURDAY);

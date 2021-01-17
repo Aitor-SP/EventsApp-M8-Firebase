@@ -42,4 +42,8 @@
     <string name="logohelp">logohelp</string>
     <string name="versi_n_1_0">VERSIÓN: 1.0</string>
     <string name="autor_aitor_sancho">AUTOR: Aitor Sancho</string>
+    <string name="ltimas_novedades">Últimas novedades</string>
+    <string name="imagenEvento">imagenEvento</string>
+    <string name="fecha_evento">Fecha evento</string>
+    <string name="prueba_evento">Prueba Evento</string>
 </resources>
