@@ -46,4 +46,5 @@
     <string name="imagenEvento">imagenEvento</string>
     <string name="fecha_evento">Fecha evento</string>
     <string name="prueba_evento">Prueba Evento</string>
+    <string name="agendaevento">agendaevento</string>
 </resources>

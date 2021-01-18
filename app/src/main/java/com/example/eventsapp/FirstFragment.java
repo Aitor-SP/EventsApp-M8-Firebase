@@ -65,6 +65,7 @@ public class FirstFragment extends Fragment {
 
             holder.binding.evento.setText(evento.evento);
             holder.binding.fecha.setText(evento.fecha);
+            holder.binding.descripcion.setText(evento.descripcion);
 
             Glide.with(FirstFragment.this).load(evento.imagenEvento).into(holder.binding.imagenEvento);
         }
