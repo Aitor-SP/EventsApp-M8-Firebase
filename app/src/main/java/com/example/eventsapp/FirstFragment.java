@@ -7,17 +7,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.bumptech.glide.Glide;
 import com.example.eventsapp.databinding.FragmentFirstBinding;
-import com.example.eventsapp.databinding.FragmentThirdBinding;
 import com.example.eventsapp.databinding.ViewholderEventoBinding;
 
 import java.util.List;
@@ -87,7 +82,6 @@ public class FirstFragment extends Fragment {
 
         public EventoViewHolder(@NonNull ViewholderEventoBinding binding) {
             super(binding.getRoot());
-
             this.binding = binding;
         }
     }
