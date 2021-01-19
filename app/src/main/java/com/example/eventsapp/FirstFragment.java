@@ -48,6 +48,7 @@ public class FirstFragment extends Fragment {
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {
         List<Evento> eventoList;
 
+
         @NonNull
         @Override // Aqui se crea el ViewHolder vacio
         public EventoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

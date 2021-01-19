@@ -78,4 +78,9 @@
         android:name="com.example.eventsapp.FourthFragment"
         android:label="fragment_fourth"
         tools:layout="@layout/fragment_fourth" />
+    <fragment
+        android:id="@+id/manoloFragment"
+        android:name="com.example.eventsapp.ManoloFragment"
+        android:label="fragment_manolo"
+        tools:layout="@layout/fragment_manolo" />
 </navigation>

@@ -47,4 +47,7 @@
     <string name="fecha_evento">Fecha evento</string>
     <string name="prueba_evento">Prueba Evento</string>
     <string name="agendaevento">agendaevento</string>
+    <string name="manolo_garc_a">Manolo García</string>
+    <string name="ic_share">ic_share</string>
+    <string name="flecha_atras">flecha_atras</string>
 </resources>
