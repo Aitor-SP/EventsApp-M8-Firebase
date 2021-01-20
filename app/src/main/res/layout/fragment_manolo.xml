@@ -30,16 +30,16 @@
 
             <ImageView
                 android:id="@+id/flecha_atras"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:clickable="true"
-                android:src="@drawable/ic_flecha"
+                android:contentDescription="@string/flecha_atras"
+                android:src="@drawable/ic_flecha1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView14"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/flecha_atras" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView14"

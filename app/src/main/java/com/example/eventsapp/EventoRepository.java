@@ -19,7 +19,7 @@ public class EventoRepository {
                 new Evento("Susans Red Nipples","21 de mayo","Conoce a este pintoresco grupo rock-punk en un concierto único.",R.drawable.susans),
                 new Evento("J Balvin","9 de junio","J Balvin aterriza en Barcelona presentando Colores, su nuevo álbum.",R.drawable.jbalvin),
                 new Evento("Unite with Tomorrowland","29 de julio","Vive la experiencia Tomorrowland al ritmo de tus djs preferidos y tops mundiales.",R.drawable.tomorrowland),
-                new Evento("El Rey León","5 de agosto","Descubre todo sobre el musical que ya han disfrutado cerca de 5.000.000 de espectadores en nuestro país.",R.drawable.reyleon),
+                new Evento("El Rey León","5 de agosto","Descubre todo sobre el musical que ya han disfrutado cerca de 5.000.000 espectadores.",R.drawable.reyleon),
                 new Evento("Love the 90's","3 de septiembre","El mayor festival de los 90 con tres escenarios con lo mejor del dance, del pop/rock y los hits del verano.",R.drawable.love90),
                 new Evento("El Tricicle","21 de octubre","Lo mejor de lo mejor de Tricicle, o casi, durante tiempo limitado.",R.drawable.tricicle),
                 new Evento("Martita de Graná","29 de noviembre","La humorista revoluciona el mundo de la comedia con su desparpajo y naturalidad.",R.drawable.martita),
