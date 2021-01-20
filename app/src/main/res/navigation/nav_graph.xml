@@ -40,7 +40,11 @@
         tools:layout="@layout/fragment_iniciar_sesion" >
         <action
             android:id="@+id/action_iniciarSesionFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
         <action
             android:id="@+id/action_iniciarSesionFragment_to_registroFragment"
             app:destination="@id/registroFragment"
