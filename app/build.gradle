@@ -50,6 +50,7 @@ dependencies {
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
     implementation "androidx.room:room-runtime:2.2.6"
     annotationProcessor "androidx.room:room-compiler:2.2.6"
+    implementation 'com.royrodriguez:transitionbutton:0.2.0'
 
 
     testImplementation 'junit:junit:4.13.1'

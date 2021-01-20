@@ -34,19 +34,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <Button
-        android:id="@+id/buttonic"
+    <com.royrodriguez.transitionbutton.TransitionButton
+        android:id="@+id/transition_button"
         android:layout_width="328dp"
         android:layout_height="55dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/btn_bg"
         android:fontFamily="@font/roboto"
         android:text="@string/iniciar_sesi_n"
         android:textColor="#FFFFFF"
+        app:defaultColor="#EB5757"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:loaderColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/crearcuenta"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/buttonic" />
+        app:layout_constraintTop_toBottomOf="@+id/transition_button" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
@@ -96,7 +96,7 @@
         android:text="@string/no_tienes_una_cuenta"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonic" />
+        app:layout_constraintTop_toBottomOf="@+id/transition_button" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
