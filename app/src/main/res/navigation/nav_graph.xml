@@ -9,17 +9,17 @@
         android:id="@+id/firstFragment"
         android:name="com.example.eventsapp.InicioFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_inicio" />
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.eventsapp.FavoritosFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_favoritos" />
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.eventsapp.AgendaFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" />
+        tools:layout="@layout/fragment_agenda" />
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.eventsapp.SplashFragment"
@@ -77,7 +77,7 @@
         android:id="@+id/fourthFragment"
         android:name="com.example.eventsapp.PerfilFragment"
         android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" />
+        tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/mostrarEventoFragment"
         android:name="com.example.eventsapp.MostrarEventoFragment"

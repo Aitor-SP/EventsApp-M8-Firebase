@@ -1,7 +1,6 @@
 package com.example.eventsapp;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -13,21 +12,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
-import com.example.eventsapp.databinding.FragmentFirstBinding;
+import com.example.eventsapp.databinding.FragmentInicioBinding;
 import com.example.eventsapp.databinding.ViewholderEventoBinding;
-
 import java.util.List;
 
 public class InicioFragment extends Fragment {
 
-    private FragmentFirstBinding binding;
+    private FragmentInicioBinding binding;
     private NavController navController;
     private EventosViewModel eventosViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return (binding = FragmentFirstBinding.inflate(inflater, container, false)).getRoot();
+        return (binding = FragmentInicioBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -42,7 +40,7 @@ public class InicioFragment extends Fragment {
 
         binding.recyclerView.setAdapter(eventosAdapter);
 
-        eventosViewModel.eventos().observe(getViewLifecycleOwner(), eventos -> eventosAdapter.setEventoList(eventos));
+        eventosViewModel.eventos().observe(getViewLifecycleOwner(), eventosAdapter::setEventoList);
     }
 
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {

@@ -10,16 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.applikeysolutions.cosmocalendar.utils.SelectionType;
-import com.example.eventsapp.databinding.FragmentThirdBinding;
+import com.example.eventsapp.databinding.FragmentAgendaBinding;
 import java.util.Calendar;
 import java.util.HashSet;
 
 public class AgendaFragment extends Fragment {
 
-    private FragmentThirdBinding binding;
+    private FragmentAgendaBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return (binding = FragmentThirdBinding.inflate(inflater, container, false)).getRoot();
+        return (binding = FragmentAgendaBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override

@@ -20,7 +20,7 @@ public class SplashFragment extends Fragment {
 
     Executor executor = Executors.newSingleThreadExecutor();
 
-    NavController navController;
+    private NavController navController;
     private FragmentSplash2Binding binding;
 
     @Override
@@ -40,24 +40,16 @@ public class SplashFragment extends Fragment {
         Glide.with(this).load(R.drawable.carga).into(binding.carga);
 
 
-        finishedLoading.observe(getViewLifecycleOwner(), new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                navController.navigate(R.id.action_splashFragment_to_iniciarSesionFragment);
-            }
-        });
+        finishedLoading.observe(getViewLifecycleOwner(), aBoolean -> navController.navigate(R.id.action_splashFragment_to_iniciarSesionFragment));
 
         // esto deberia estar en el Model y llamarlo a traves del ViewModel
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    // simular la carga de recursos
-                    Thread.sleep(4000);
-                    finishedLoading.postValue(true);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        executor.execute(() -> {
+            try {
+                // simular la carga de recursos
+                Thread.sleep(4000);
+                finishedLoading.postValue(true);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
     }

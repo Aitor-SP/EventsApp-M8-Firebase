@@ -15,8 +15,8 @@ import android.widget.Button;
 
 public class RegistroFragment extends Fragment {
 
-    Button btncrear,btnback;
-    NavController navController;
+    private Button btncrear,btnback;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
