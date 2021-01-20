@@ -11,17 +11,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.eventsapp.databinding.FragmentTabbed1Binding;
+import com.example.eventsapp.databinding.FragmentSecondBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class Tabbed1Fragment extends Fragment {
+public class FavoritosFragment extends Fragment {
 
-    private FragmentTabbed1Binding binding;
+    private FragmentSecondBinding binding;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return (binding = FragmentTabbed1Binding.inflate(inflater, container, false)).getRoot();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return (binding = FragmentSecondBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -34,11 +36,11 @@ public class Tabbed1Fragment extends Fragment {
             public Fragment createFragment(int position) {
                 switch (position) {
                     case 0: default:
-                        return new Tabbed1AFragment();
+                        return new ConciertosFragment();
                     case 1:
-                        return new Tabbed1BFragment();
+                        return new TeatroFragment();
                     case 2:
-                        return new Tabbed1CFragment();
+                        return new EspectaculosFragment();
                 }
             }
 

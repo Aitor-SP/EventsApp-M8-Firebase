@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FourthFragment">
+    tools:context=".PerfilFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -34,13 +34,13 @@
                 android:contentDescription="@string/logoperfil"
                 android:src="@drawable/user_circle"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView14"
+                app:layout_constraintEnd_toStartOf="@+id/tit_evento"
                 app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/rojo_events" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_help"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -50,11 +50,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar2"
                 app:layout_constraintHorizontal_bias="0.90"
-                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/tit_evento"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/tit_evento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"

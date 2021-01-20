@@ -17,16 +17,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
-public class FourthFragment extends Fragment {
+public class PerfilFragment extends Fragment {
 
-    ImageButton btnhelp;
+    ImageView btnhelp;
     Dialog mDialog;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fourth, container, false);
     }
 

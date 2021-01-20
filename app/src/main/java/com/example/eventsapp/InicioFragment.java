@@ -5,8 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +18,11 @@ import com.example.eventsapp.databinding.ViewholderEventoBinding;
 
 import java.util.List;
 
-public class FirstFragment extends Fragment {
+public class InicioFragment extends Fragment {
 
     private FragmentFirstBinding binding;
+    private NavController navController;
+    private EventosViewModel eventosViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,18 +34,15 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        EventosViewModel eventosViewModel = new ViewModelProvider(this).get(EventosViewModel.class);
+        navController = Navigation.findNavController(view);
+
+        eventosViewModel = new ViewModelProvider(requireActivity()).get(EventosViewModel.class);
 
         EventosAdapter eventosAdapter = new EventosAdapter();
 
         binding.recyclerView.setAdapter(eventosAdapter);
 
-        eventosViewModel.eventos().observe(getViewLifecycleOwner(), new Observer<List<Evento>>() {
-            @Override
-            public void onChanged(List<Evento> eventos) {
-                eventosAdapter.setEventoList(eventos);
-            }
-        });
+        eventosViewModel.eventos().observe(getViewLifecycleOwner(), eventos -> eventosAdapter.setEventoList(eventos));
     }
 
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {
@@ -63,10 +63,15 @@ public class FirstFragment extends Fragment {
             holder.binding.fecha.setText(evento.fecha);
             holder.binding.descripcion.setText(evento.descripcion);
 
-            Glide.with(FirstFragment.this).load(evento.imagenEvento).into(holder.binding.imagenEvento);
+            Glide.with(InicioFragment.this).load(evento.imagenEvento).into(holder.binding.imagenEvento);
+
+            holder.itemView.setOnClickListener(v -> {
+                eventosViewModel.seleccionar(evento);
+                navController.navigate(R.id.mostrarEventoFragment);
+            });
         }
 
-        @Override // Llama al recyclerview para saber cuantos viewholder ha de generar en pantalla
+        @Override // El recyclerview llama para saber cuantos viewholder ha de generar en pantalla
         public int getItemCount() {
             return eventoList == null ? 0 : eventoList.size();
         }
@@ -77,7 +82,7 @@ public class FirstFragment extends Fragment {
         }
     }
 
-    class EventoViewHolder extends RecyclerView.ViewHolder {
+    static class EventoViewHolder extends RecyclerView.ViewHolder {
 
         ViewholderEventoBinding binding;
 

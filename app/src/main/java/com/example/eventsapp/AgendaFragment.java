@@ -14,7 +14,7 @@ import com.example.eventsapp.databinding.FragmentThirdBinding;
 import java.util.Calendar;
 import java.util.HashSet;
 
-public class ThirdFragment extends Fragment {
+public class AgendaFragment extends Fragment {
 
     private FragmentThirdBinding binding;
 
