@@ -31,14 +31,14 @@
 
             <ImageView
                 android:id="@+id/flecha_atras"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:clickable="true"
                 android:contentDescription="@string/flecha_atras"
-                android:src="@drawable/ic_flecha1"
+                android:src="@drawable/ic_outline_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/tit_evento"
-                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,16 +58,16 @@
 
             <ImageView
                 android:id="@+id/share"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:clickable="true"
-                android:src="@drawable/ic_share"
+                android:contentDescription="@string/ic_share"
+                android:src="@drawable/ic_outline_share"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-                app:layout_constraintHorizontal_bias="0.90"
+                app:layout_constraintHorizontal_bias="0.8"
                 app:layout_constraintStart_toEndOf="@+id/tit_evento"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/ic_share" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>

@@ -44,17 +44,16 @@ public class MostrarEventoFragment extends Fragment {
         binding.share.setOnClickListener(v ->{
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Vas a compartir este evento.");
             sendIntent.setType("text/plain");
 
             Intent shareIntent = Intent.createChooser(sendIntent, null);
             startActivity(shareIntent);
-
         });
 
 
         eventosViewModel.seleccionado().observe(getViewLifecycleOwner(), evento -> {
-
+            binding.titEvento.setText(evento.evento);
             Glide.with(requireContext()).load(evento.imagenEvento).into(binding.imgEvento);
         });
     }

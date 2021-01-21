@@ -46,7 +46,7 @@
                 android:layout_height="24dp"
                 android:clickable="true"
                 android:contentDescription="@string/ichelp"
-                android:src="@drawable/ic_help"
+                android:src="@drawable/ic_outline_info_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar2"
                 app:layout_constraintHorizontal_bias="0.90"
