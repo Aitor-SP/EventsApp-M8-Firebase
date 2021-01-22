@@ -36,7 +36,7 @@ public class AgendaFragment extends Fragment {
 
         binding.cosmoCalendar.setWeekendDayTextColor(Color.parseColor("#EB5757"));
 
-        binding.cosmoCalendar.setCurrentDayIconRes(R.drawable.ic_triangle_green);
+        binding.cosmoCalendar.setCurrentDayIconRes(R.drawable.ic_triangle_red);
 
         binding.cosmoCalendar.setWeekendDays(new HashSet(){{
             add(Calendar.SATURDAY);
