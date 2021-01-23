@@ -48,4 +48,19 @@
     <string name="ic_share">ic_share</string>
     <string name="flecha_atras">flecha_atras</string>
     <string name="ic_alerta">ic_alerta</string>
+    <string name="_27_de_febrero">27 de febrero</string>
+    <string name="palau_sant_jordi">Palau Sant Jordi</string>
+    <string name="gps_agenda">gps_agenda</string>
+    <string name="parc_del_f_rum">Parc del Fòrum</string>
+    <string name="cirque_du_soleil">Cirque du Soleil</string>
+    <string name="cal_agenda">TODO</string>
+    <string name="floating_button">floating_button</string>
+    <string name="a_adir_recordatorio">Añadir recordatorio</string>
+    <string name="a_adir">AÑADIR</string>
+    <string name="ubicaci_n">Ubicación</string>
+    <string name="fecha">Fecha</string>
+    <string name="evento">Evento</string>
+    <string name="agenda_popup">agenda_popup</string>
+    <string name="evento_popup">evento_popup</string>
+    <string name="ubicacion_popup">ubicacion_popup</string>
 </resources>
