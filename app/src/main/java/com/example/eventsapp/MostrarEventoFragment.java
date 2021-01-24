@@ -16,6 +16,10 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.eventsapp.databinding.FragmentMostrarEventoBinding;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+import com.like.LikeButton;
+import com.like.OnLikeListener;
 
 public class MostrarEventoFragment extends Fragment {
 
@@ -49,10 +53,26 @@ public class MostrarEventoFragment extends Fragment {
             startActivity(shareIntent);
         });
 
+        binding.likeMostrarevento.setOnLikeListener(new OnLikeListener() {
+            @Override
+            public void liked(LikeButton likeButton) {
+                Snackbar.make(view, "Has añadido este evento a Favoritos.",Snackbar.LENGTH_SHORT)
+                        .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
+                        .show();
+            }
+
+            @Override
+            public void unLiked(LikeButton likeButton) {
+                Snackbar.make(view, "Has eliminado este evento de Favoritos.", Snackbar.LENGTH_SHORT)
+                        .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
+                        .show();
+            }
+        });
+
 
         eventosViewModel.seleccionado().observe(getViewLifecycleOwner(), evento -> {
             binding.titEvento.setText(evento.evento);
-            Glide.with(requireContext()).load(evento.imagenEvento).into(binding.imgEvento);
+            Glide.with(requireContext()).load(evento.imagenGrande).into(binding.imgEvento);
         });
     }
 }

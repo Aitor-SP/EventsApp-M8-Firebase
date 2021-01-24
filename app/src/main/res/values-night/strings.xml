@@ -83,4 +83,26 @@
     <string name="share_fito_fav">share_fito_fav</string>
     <string name="loc_fito_fav">loc_fito_fav</string>
     <string name="ag_fito_fav">ag_fito_fav</string>
+    <string name="el_tricicle_fav">El Tricicle</string>
+    <string name="_21_de_octubre_fav">21 de octubre</string>
+    <string name="teatro_apolo_fav">Teatro Apolo</string>
+    <string name="share_teatro">TODO</string>
+    <string name="loc_teatro">loc_teatro</string>
+    <string name="age_teatro">age_teatro</string>
+    <string name="tricicle_fav">tricicle_fav</string>
+    <string name="titulo_evento">TITULO EVENTO</string>
+    <string name="img_evento_mostrar">img_evento_mostrar</string>
+    <string name="fav_mostrar_evento">fav_mostrar_evento</string>
+    <string name="unite_with_tomorrowland_esp">Unite with Tomorrowland</string>
+    <string name="parc_de_can_zam">Parc de Can Zam</string>
+    <string name="_29_de_julio">29 de julio</string>
+    <string name="cirque_du_soleil_esp">Cirque du Soleil</string>
+    <string name="circo_esp">circo_esp</string>
+    <string name="ag_ci_esp">ag_ci_esp</string>
+    <string name="loc_cir_esp">loc_cir_esp</string>
+    <string name="sha_cir_esp">sha_cir_esp</string>
+    <string name="uni_esp">uni_esp</string>
+    <string name="share_uni_esp">share_uni_esp</string>
+    <string name="loc_uni_esp">loc_uni_esp</string>
+    <string name="ag_un_esp">ag_un_esp</string>
 </resources>
