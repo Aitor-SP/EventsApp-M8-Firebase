@@ -52,6 +52,7 @@ dependencies {
 
     implementation 'com.github.applikeysolutions:cosmocalendar:1.0.4'
     implementation 'com.royrodriguez:transitionbutton:0.2.0'
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
 
 
     testImplementation 'junit:junit:4.13.1'

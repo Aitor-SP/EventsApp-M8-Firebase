@@ -66,4 +66,24 @@
     <string name="agenda_popup">agenda_popup</string>
     <string name="evento_popup">evento_popup</string>
     <string name="ubicacion_popup">ubicacion_popup</string>
+    <string name="manolo_garc_a_fav">Manolo García</string>
+    <string name="_10_de_enero_fav">10 de enero</string>
+    <string name="palau_sant_jordi_fav">Palau Sant Jordi</string>
+    <string name="share_fav">TODO</string>
+    <string name="manolo_fav">TODO</string>
+    <string name="loca_fav">TODO</string>
+    <string name="susans_red_nipples">Susans Red Nipples</string>
+    <string name="sala_apolo">Sala Apolo</string>
+    <string name="susa_fav">susa_fav</string>
+    <string name="fito_fitipaldis"><![CDATA[Fito & Fitipaldis]]></string>
+    <string name="_21_de_mayo">21 de mayo</string>
+    <string name="fito_fav">TODO</string>
+    <string name="loc_sus_fav">loc_sus_fav</string>
+    <string name="ag_sus_fav">ag_sus_fav</string>
+    <string name="sus_sha_fav">sus_sha_fav</string>
+    <string name="palau_sant_jordi_fito">Palau Sant Jordi</string>
+    <string name="_10_de_diciembre_fav">10 de diciembre</string>
+    <string name="share_fito_fav">share_fito_fav</string>
+    <string name="loc_fito_fav">loc_fito_fav</string>
+    <string name="ag_fito_fav">ag_fito_fav</string>
 </resources>

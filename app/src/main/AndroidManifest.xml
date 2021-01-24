@@ -9,7 +9,8 @@
         android:label="EventsApp"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EventsApp">
+        android:theme="@style/Theme.EventsApp"
+        tools:replace="android:label">
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>

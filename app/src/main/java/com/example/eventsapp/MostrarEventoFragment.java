@@ -36,15 +36,13 @@ public class MostrarEventoFragment extends Fragment {
         navController = Navigation.findNavController(view);
 
         // Para volver atras al cliclar en la flecha
-        binding.flechaAtras.setOnClickListener(v ->{
-            navController.popBackStack();
-        });
+        binding.flechaAtras.setOnClickListener(v -> navController.popBackStack());
 
         // Para compartir al cliclar en el share
         binding.share.setOnClickListener(v ->{
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Vas a compartir este evento.");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "EVENTSAPP");
             sendIntent.setType("text/plain");
 
             Intent shareIntent = Intent.createChooser(sendIntent, null);
