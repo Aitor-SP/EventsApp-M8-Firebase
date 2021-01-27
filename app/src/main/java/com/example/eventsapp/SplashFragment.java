@@ -1,6 +1,7 @@
 package com.example.eventsapp;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +39,6 @@ public class SplashFragment extends Fragment {
         MutableLiveData<Boolean> finishedLoading = new MutableLiveData<>();
 
         Glide.with(this).load(R.drawable.carga).into(binding.carga);
-
 
         finishedLoading.observe(getViewLifecycleOwner(), aBoolean -> navController.navigate(R.id.action_splashFragment_to_iniciarSesionFragment));
 

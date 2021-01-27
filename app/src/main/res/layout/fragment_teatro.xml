@@ -121,25 +121,38 @@
 
                 <ImageView
                     android:id="@+id/share_teatro"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
                     android:contentDescription="@string/share_teatro"
                     android:src="@drawable/ic_outline_share"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.8" />
 
-                <com.like.LikeButton
-                    android:id="@+id/like_teatro"
+                <ImageView
+                    android:id="@+id/carrito"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:icon_size="18dp"
-                    app:icon_type="heart"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_carrito"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/share_teatro"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView27"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:liked="true" />
+                    app:layout_constraintVertical_bias="0.8"
+                    android:contentDescription="@string/carrito" />
+
+                <ImageView
+                    android:id="@+id/cerrar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/cerrar" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

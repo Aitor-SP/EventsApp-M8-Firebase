@@ -1,6 +1,7 @@
 package com.example.eventsapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,11 +22,22 @@ import com.google.android.material.snackbar.Snackbar;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class MostrarEventoFragment extends Fragment {
 
     private FragmentMostrarEventoBinding binding;
     private NavController navController;
     private EventosViewModel eventosViewModel;
+    private URL url;
+    {
+        try {
+            url = new URL("https://www.entradas.com/");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +60,6 @@ public class MostrarEventoFragment extends Fragment {
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, "EVENTSAPP");
             sendIntent.setType("text/plain");
-
             Intent shareIntent = Intent.createChooser(sendIntent, null);
             startActivity(shareIntent);
         });
@@ -69,9 +80,18 @@ public class MostrarEventoFragment extends Fragment {
             }
         });
 
+        binding.txtCompra.setOnClickListener(v -> {
+            Intent compraIntent = new Intent(Intent.ACTION_VIEW);
+            compraIntent.setData(Uri.parse(String.valueOf(url)));
+            startActivity(compraIntent);
+        });
+
 
         eventosViewModel.seleccionado().observe(getViewLifecycleOwner(), evento -> {
             binding.titEvento.setText(evento.evento);
+            binding.etiquetaEvento.setText(evento.etiqueta);
+            binding.fechaEvento.setText(evento.fecha);
+            binding.ubicacionEvento.setText(evento.ubicacion);
             Glide.with(requireContext()).load(evento.imagenGrande).into(binding.imgEvento);
         });
     }

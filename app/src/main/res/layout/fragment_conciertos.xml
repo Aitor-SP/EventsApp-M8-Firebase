@@ -34,17 +34,6 @@
                 android:layout_height="match_parent"
                 android:padding="5dp">
 
-                <com.like.LikeButton
-                    android:id="@+id/btnlike"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:icon_size="18dp"
-                    app:icon_type="heart"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_share"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:liked="true" />
-
                 <TextView
                     android:id="@+id/evento"
                     android:layout_width="wrap_content"
@@ -133,14 +122,38 @@
 
                 <ImageView
                     android:id="@+id/btn_share"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
                     android:contentDescription="@string/share_fav"
                     android:src="@drawable/ic_outline_share"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.80" />
+
+                <ImageView
+                    android:id="@+id/carrito1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_carrito"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_share"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView19"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.80"
+                    android:contentDescription="@string/carrito1" />
+
+                <ImageView
+                    android:id="@+id/cerrar1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/cerrar1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -161,17 +174,6 @@
                 android:layout_height="match_parent"
                 android:padding="5dp">
 
-                <com.like.LikeButton
-                    android:id="@+id/btnlike2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:icon_size="18dp"
-                    app:icon_type="heart"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/share2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:liked="true" />
-
                 <ImageView
                     android:id="@+id/imageView19"
                     android:layout_width="86dp"
@@ -187,14 +189,15 @@
 
                 <ImageView
                     android:id="@+id/share2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/sus_sha_fav"
                     android:src="@drawable/ic_outline_share"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/sus_sha_fav" />
+                    app:layout_constraintVertical_bias="0.8" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -264,6 +267,29 @@
                     app:layout_constraintStart_toEndOf="@+id/imageView22"
                     app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
+                <ImageView
+                    android:id="@+id/carrito2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_carrito"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/share2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView21"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.8"
+                    android:contentDescription="@string/carrito2" />
+
+                <ImageView
+                    android:id="@+id/cerrar2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/cerrar2" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -320,22 +346,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/share_fito_fav"
                     android:src="@drawable/ic_outline_share"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/share_fito_fav" />
-
-                <com.like.LikeButton
-                    android:id="@+id/likeButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:icon_size="18dp"
-                    app:icon_type="heart"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/share3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:liked="true" />
+                    app:layout_constraintVertical_bias="0.8" />
 
                 <ImageView
                     android:id="@+id/imageView25"
@@ -386,6 +402,29 @@
                     app:layout_constraintHorizontal_bias="0.05"
                     app:layout_constraintStart_toEndOf="@+id/imageView25"
                     app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <ImageView
+                    android:id="@+id/carrito3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_carrito"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/share3"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/textView23"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.8"
+                    android:contentDescription="@string/carrito3" />
+
+                <ImageView
+                    android:id="@+id/cerrar3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/cerrar3" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
