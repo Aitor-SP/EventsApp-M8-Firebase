@@ -32,10 +32,12 @@ public class PerfilFragment extends Fragment {
         btnhelp = view.findViewById(R.id.btn_help);
         mDialog = new Dialog(getActivity());
 
-        btnhelp.setOnClickListener(v -> {
+        btnhelp.setOnLongClickListener(v -> {
             mDialog.setContentView(R.layout.popup);
             mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             mDialog.show();
+
+            return true;
         });
     }
 }
