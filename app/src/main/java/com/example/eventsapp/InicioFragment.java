@@ -4,6 +4,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -12,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.eventsapp.databinding.FragmentInicioBinding;
@@ -35,7 +39,6 @@ public class InicioFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         eventosViewModel = new ViewModelProvider(requireActivity()).get(EventosViewModel.class);
-
         navController = Navigation.findNavController(view);
 
         binding.insertarEvento.setOnClickListener(v -> navController.navigate(R.id.action_inicioFragment_to_insertarEventoFragment));
@@ -57,17 +60,31 @@ public class InicioFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int posicion = viewHolder.getAdapterPosition();
-                Evento evento = eventosAdapter.obtenerElemento(posicion);
+                Evento evento = eventosAdapter.obtenerEvento(posicion);
                 eventosViewModel.eliminar(evento);
 
             }
         }).attachToRecyclerView(binding.recyclerView);
+
+        binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) { return false; }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                eventosViewModel.establecerTerminoBusqueda(newText);
+                return false;
+            }
+        });
     }
 
+    LiveData<List<Evento>> obtenerEventos(){
+        return eventosViewModel.obtenerEventos();
+    }
 
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {
 
-        public Evento obtenerElemento(int posicion){
+        public Evento obtenerEvento(int posicion){
             return eventoList.get(posicion);
         }
 
@@ -115,5 +132,10 @@ public class InicioFragment extends Fragment {
             super(binding.getRoot());
             this.binding = binding;
         }
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 }

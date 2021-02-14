@@ -36,6 +36,9 @@ public abstract class BaseDeDatos extends RoomDatabase {
 
         @Delete
         void eliminar(Evento evento);
+
+        @Query("SELECT * FROM Evento WHERE evento LIKE '%' || :t || '%'")
+        LiveData<List<Evento>> buscar(String t);
     }
 
     private static volatile BaseDeDatos db;

@@ -86,7 +86,6 @@ public class MostrarEventoFragment extends Fragment {
             startActivity(compraIntent);
         });
 
-
         eventosViewModel.seleccionado().observe(getViewLifecycleOwner(), evento -> {
             binding.titEvento.setText(evento.evento);
             binding.fechaEvento.setText(evento.fecha);

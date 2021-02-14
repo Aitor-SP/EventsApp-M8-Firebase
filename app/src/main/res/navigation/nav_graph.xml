@@ -104,4 +104,9 @@
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
+    <fragment
+        android:id="@+id/recyclerBusquedaFragment"
+        android:name="com.example.eventsapp.RecyclerBusquedaFragment"
+        android:label="fragment_recycler_busqueda"
+        tools:layout="@layout/fragment_recycler_busqueda" />
 </navigation>

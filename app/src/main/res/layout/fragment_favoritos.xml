@@ -28,6 +28,7 @@
                 android:queryBackground="@color/gris_events"
                 android:queryHint="Buscar"
                 android:searchIcon="@drawable/ic_outline_search"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

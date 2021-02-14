@@ -16,7 +16,7 @@ import javax.security.auth.callback.Callback;
 public class EventoRepository {
 
     Executor executor = Executors.newSingleThreadExecutor();
-    private final BaseDeDatos.EventosDao dao;
+    BaseDeDatos.EventosDao dao;
 
     public EventoRepository(Application application) {
         dao = BaseDeDatos.getInstance(application).obtenerEventosDao();
@@ -32,5 +32,9 @@ public class EventoRepository {
 
     public void eliminar(Evento evento) {
         executor.execute(() -> dao.eliminar(evento));
+    }
+
+    LiveData<List<Evento>> buscar(String t) {
+        return dao.buscar(t);
     }
 }

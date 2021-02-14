@@ -7,8 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
 
 import java.util.List;
+import java.util.function.Function;
 
 public class EventosViewModel extends AndroidViewModel {
 
@@ -16,6 +18,14 @@ public class EventosViewModel extends AndroidViewModel {
 
     MutableLiveData<Evento> eventoSeleccionado = new MutableLiveData<>();
     MutableLiveData<Uri> imagenSeleccionada = new MutableLiveData<>();
+    MutableLiveData<String> terminoBusqueda = new MutableLiveData<>();
+
+    LiveData<List<Evento>> resultadoBusqueda = Transformations.switchMap(terminoBusqueda, new Function<String, LiveData<List<Evento>>>() {
+        @Override
+        public LiveData<List<Evento>> apply(String input) {
+            return eventoRepository.buscar(input);
+        }
+    });
 
     public EventosViewModel(@NonNull Application application) {
         super(application);
@@ -45,5 +55,13 @@ public class EventosViewModel extends AndroidViewModel {
 
     void eliminar(Evento evento){
         eventoRepository.eliminar(evento);
+    }
+
+    LiveData<List<Evento>> buscar(){
+        return resultadoBusqueda;
+    }
+
+    void establecerTerminoBusqueda(String t){
+        terminoBusqueda.setValue(t);
     }
 }
