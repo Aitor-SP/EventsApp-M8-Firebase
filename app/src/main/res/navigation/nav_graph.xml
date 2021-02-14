@@ -6,25 +6,33 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/firstFragment"
+        android:id="@+id/inicioFragment"
         android:name="com.example.eventsapp.InicioFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_inicio" />
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_insertarEventoFragment"
+            app:destination="@id/insertarEventoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
-        android:id="@+id/secondFragment"
+        android:id="@+id/favoritosFragment"
         android:name="com.example.eventsapp.FavoritosFragment"
-        android:label="fragment_second"
+        android:label="fragment_favoritos"
         tools:layout="@layout/fragment_favoritos" />
     <fragment
-        android:id="@+id/thirdFragment"
+        android:id="@+id/agendaFragment"
         android:name="com.example.eventsapp.AgendaFragment"
-        android:label="fragment_third"
+        android:label="fragment_agenda"
         tools:layout="@layout/fragment_agenda" />
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.eventsapp.SplashFragment"
-        android:label="fragment_splash2"
-        tools:layout="@layout/fragment_splash2" >
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash2">
         <action
             android:id="@+id/action_splashFragment_to_iniciarSesionFragment"
             app:destination="@id/iniciarSesionFragment"
@@ -40,7 +48,7 @@
         tools:layout="@layout/fragment_iniciar_sesion" >
         <action
             android:id="@+id/action_iniciarSesionFragment_to_firstFragment"
-            app:destination="@id/firstFragment"
+            app:destination="@id/inicioFragment"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
@@ -60,7 +68,7 @@
         tools:layout="@layout/fragment_registro" >
         <action
             android:id="@+id/action_registroFragment_to_firstFragment"
-            app:destination="@id/firstFragment"
+            app:destination="@id/inicioFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -74,13 +82,26 @@
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
-        android:id="@+id/fourthFragment"
+        android:id="@+id/perfilFragment"
         android:name="com.example.eventsapp.PerfilFragment"
-        android:label="fragment_fourth"
+        android:label="fragment_perfil"
         tools:layout="@layout/fragment_perfil" />
     <fragment
         android:id="@+id/mostrarEventoFragment"
         android:name="com.example.eventsapp.MostrarEventoFragment"
-        android:label="fragment_manolo"
+        android:label="fragment_mostrar_evento"
         tools:layout="@layout/fragment_mostrar_evento" />
+    <fragment
+        android:id="@+id/insertarEventoFragment"
+        android:name="com.example.eventsapp.InsertarEventoFragment"
+        android:label="fragment_insertar_evento"
+        tools:layout="@layout/fragment_insertar_evento" >
+        <action
+            android:id="@+id/action_insertarEventoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
 </navigation>

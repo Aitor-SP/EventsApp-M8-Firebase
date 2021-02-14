@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/firstFragment"
-        android:title="Inicio"
+        android:id="@+id/inicioFragment"
+        android:title="@string/inicio_btm_nav"
         android:icon="@drawable/ic_home" />
 
     <item
-        android:id="@+id/secondFragment"
-        android:title="Favoritos"
+        android:id="@+id/favoritosFragment"
+        android:title="@string/favoritos_btm_nav"
         android:icon="@drawable/ic_fav" />
 
     <item
-        android:id="@+id/thirdFragment"
-        android:title="Agenda"
+        android:id="@+id/agendaFragment"
+        android:title="@string/agenda_btm_nav"
         android:icon="@drawable/ic_calendar" />
 
     <item
-        android:id="@+id/fourthFragment"
-        android:title="Perfil"
+        android:id="@+id/perfilFragment"
+        android:title="@string/perfil_btm_nav"
         android:icon="@drawable/ic_user" />
 </menu>

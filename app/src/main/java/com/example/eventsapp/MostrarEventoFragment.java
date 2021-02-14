@@ -89,10 +89,8 @@ public class MostrarEventoFragment extends Fragment {
 
         eventosViewModel.seleccionado().observe(getViewLifecycleOwner(), evento -> {
             binding.titEvento.setText(evento.evento);
-            binding.etiquetaEvento.setText(evento.etiqueta);
             binding.fechaEvento.setText(evento.fecha);
-            binding.ubicacionEvento.setText(evento.ubicacion);
-            Glide.with(requireContext()).load(evento.imagenGrande).into(binding.imgEvento);
+            Glide.with(requireContext()).load(evento.imagenEvento).into(binding.imgEvento);
         });
     }
 }

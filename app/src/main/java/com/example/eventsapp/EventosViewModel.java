@@ -1,6 +1,8 @@
 package com.example.eventsapp;
 
 import android.app.Application;
+import android.net.Uri;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
@@ -10,18 +12,19 @@ import java.util.List;
 
 public class EventosViewModel extends AndroidViewModel {
 
-    EventoRepository eventoRepository;
+    private final EventoRepository eventoRepository;
 
     MutableLiveData<Evento> eventoSeleccionado = new MutableLiveData<>();
+    MutableLiveData<Uri> imagenSeleccionada = new MutableLiveData<>();
 
     public EventosViewModel(@NonNull Application application) {
         super(application);
 
-        eventoRepository = new EventoRepository();
+        eventoRepository = new EventoRepository(application);
     }
 
-    LiveData<List<Evento>> eventos(){
-        return eventoRepository.eventos();
+    public LiveData<List<Evento>> obtenerEventos(){
+        return eventoRepository.obtenerEventos();
     }
 
     void seleccionar(Evento evento){
@@ -30,5 +33,17 @@ public class EventosViewModel extends AndroidViewModel {
 
     MutableLiveData<Evento> seleccionado(){
         return eventoSeleccionado;
+    }
+
+    public void insertarEvento(String evento, String fecha, String descripcion, Uri imagenSeleccionada) {
+        eventoRepository.insertarEvento(evento, fecha, descripcion, imagenSeleccionada);
+    }
+
+    void establecerImagenSeleccionada(Uri uri){
+        imagenSeleccionada.setValue(uri);
+    }
+
+    void eliminar(Evento evento){
+        eventoRepository.eliminar(evento);
     }
 }

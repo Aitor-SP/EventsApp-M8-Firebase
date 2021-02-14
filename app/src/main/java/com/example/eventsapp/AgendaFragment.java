@@ -1,7 +1,6 @@
 package com.example.eventsapp;
 
 import android.app.Dialog;
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -59,10 +58,8 @@ public class AgendaFragment extends Fragment {
             mDialog.setContentView(R.layout.popup_anadir);
             mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             mDialog.show();
-            bclose = mDialog.findViewById(R.id.btn_añadir);
-            bclose.setOnClickListener(v1 -> {
-                mDialog.dismiss();
-            });
+            bclose = mDialog.findViewById(R.id.btn_add_evento);
+            bclose.setOnClickListener(v1 -> mDialog.dismiss());
         });
     }
 }

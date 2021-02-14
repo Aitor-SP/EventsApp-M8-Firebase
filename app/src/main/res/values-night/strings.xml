@@ -129,4 +129,14 @@
     <string name="evento_prubea">EVENTO PRUEBA</string>
     <string name="descripcion">DESCRIPCION</string>
     <string name="fecha_evento_1">FECHA EVENTO</string>
+    <string name="a_adir_evento">AÑADIR EVENTO</string>
+    <string name="descripci_n_del_evento">Descripción del evento</string>
+    <string name="img_desc">img_desc</string>
+    <string name="img_eve">img_eve</string>
+    <string name="img_evento">img_evento</string>
+    <string name="anadir_evento">Añadir Evento</string>
+    <string name="inicio_btm_nav">Inicio</string>
+    <string name="favoritos_btm_nav">Favoritos</string>
+    <string name="agenda_btm_nav">Agenda</string>
+    <string name="perfil_btm_nav">Perfil</string>
 </resources>
