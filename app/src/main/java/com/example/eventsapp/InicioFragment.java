@@ -15,9 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
-
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.eventsapp.databinding.FragmentInicioBinding;
 import com.example.eventsapp.databinding.ViewholderEventoBinding;
 import java.util.List;
@@ -72,13 +70,17 @@ public class InicioFragment extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                eventosViewModel.establecerTerminoBusqueda(newText);
+                eventosViewModel.establecerTerminoBusqueda("");
                 return false;
             }
         });
+        eventosViewModel.resultadoBusqueda.observe(getViewLifecycleOwner(), eventos -> {
+            eventosAdapter.setEventoList(eventos);
+        });
     }
 
-    LiveData<List<Evento>> obtenerEventos(){
+    // NO CONSIGO QUE FUNCIONEEEFOEWNJOFEWJFOEWJIEOFIJEWOIJ
+    LiveData<List<Evento>> resultadoBusqueda() {
         return eventosViewModel.obtenerEventos();
     }
 
@@ -132,10 +134,5 @@ public class InicioFragment extends Fragment {
             super(binding.getRoot());
             this.binding = binding;
         }
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 }
