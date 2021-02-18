@@ -45,7 +45,7 @@
         app:defaultColor="#EB5757"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin"
         app:loaderColor="#FFFFFF" />
 
     <TextView
@@ -67,7 +67,7 @@
         android:focusable="true" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/emailLogin"
         android:layout_width="328dp"
         android:layout_height="66dp"
         android:layout_marginTop="40dp"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/transition_button" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordLogin"
         android:layout_width="328dp"
         android:layout_height="66dp"
         android:layout_marginTop="30dp"
@@ -114,7 +114,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/emailLogin" />
 
     <TextView
         android:id="@+id/textView3"
