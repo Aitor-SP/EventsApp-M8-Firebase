@@ -43,12 +43,10 @@ public class InicioFragment extends Fragment {
         EventosAdapter eventosAdapter = new EventosAdapter();
         binding.recyclerView.setAdapter(eventosAdapter);
 
-        eventosViewModel.obtenerEventos().observe(getViewLifecycleOwner(), eventos -> eventosAdapter.setEventoList(eventos));
+        // Se observa la variable resultadoBusqueda para mostrarla en el RecyclerView
+        eventosViewModel.resultadoBusqueda.observe(getViewLifecycleOwner(), eventosAdapter::setEventoList);
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(
-                ItemTouchHelper.UP | ItemTouchHelper.DOWN,
-                ItemTouchHelper.RIGHT  | ItemTouchHelper.LEFT) {
-
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN, ItemTouchHelper.RIGHT  | ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return true;
@@ -63,6 +61,8 @@ public class InicioFragment extends Fragment {
             }
         }).attachToRecyclerView(binding.recyclerView);
 
+        eventosViewModel.terminoBusqueda.setValue("");
+
         // Cuando se busque algo se establece el TerminoBusqueda
         binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -71,19 +71,10 @@ public class InicioFragment extends Fragment {
             @Override
             public boolean onQueryTextChange(String newText) {
                 // Cuando aun no se ha buscado se establece un TerminoBusqueda vacio
-                eventosViewModel.establecerTerminoBusqueda("");
+                eventosViewModel.terminoBusqueda.setValue(newText);
                 return false;
             }
         });
-        // Se observa la variable resultadoBusqueda para mostrarla en el RecyclerView
-        eventosViewModel.resultadoBusqueda.observe(getViewLifecycleOwner(), eventos -> {
-            eventosAdapter.setEventoList(eventos);
-        });
-    }
-
-    // NO CONSIGO QUE FUNCIONEEEFOEWNJOFEWJFOEWJIEOFIJEWOIJ
-    LiveData<List<Evento>> resultadoBusqueda() {
-        return resultadoBusqueda();
     }
 
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {

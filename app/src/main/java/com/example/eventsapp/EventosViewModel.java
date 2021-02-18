@@ -24,9 +24,6 @@ public class EventosViewModel extends AndroidViewModel {
         eventoRepository = new EventoRepository(application);
     }
 
-    public LiveData<List<Evento>> obtenerEventos(){
-        return eventoRepository.obtenerEventos();
-    }
 
     void seleccionar(Evento evento){
         eventoSeleccionado.setValue(evento);
@@ -55,13 +52,4 @@ public class EventosViewModel extends AndroidViewModel {
             return eventoRepository.buscar(input);
         }
     });
-
-    LiveData<List<Evento>> buscar(){
-        return resultadoBusqueda;
-    }
-
-    // Este metodo cambia el valor de la variable terminoBusqueda
-    void establecerTerminoBusqueda(String t){
-        terminoBusqueda.setValue(t);
-    }
 }

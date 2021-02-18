@@ -83,7 +83,9 @@ public class InsertarEventoFragment extends Fragment {
     }
 
     private final ActivityResultLauncher<String[]> lanzadorGaleria = registerForActivityResult(new ActivityResultContracts.OpenDocument(), uri -> {
-        requireContext().getContentResolver().takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        eventosViewModel.establecerImagenSeleccionada(uri);
+        if (uri != null) {
+            requireContext().getContentResolver().takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            eventosViewModel.establecerImagenSeleccionada(uri);
+        }
     });
 }
