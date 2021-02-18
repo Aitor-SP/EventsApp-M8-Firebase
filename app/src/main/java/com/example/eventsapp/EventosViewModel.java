@@ -18,13 +18,6 @@ public class EventosViewModel extends AndroidViewModel {
     MutableLiveData<Uri> imagenSeleccionada = new MutableLiveData<>();
     MutableLiveData<String> terminoBusqueda = new MutableLiveData<>();
 
-    LiveData<List<Evento>> resultadoBusqueda = Transformations.switchMap(terminoBusqueda, new Function<String, LiveData<List<Evento>>>() {
-        @Override
-        public LiveData<List<Evento>> apply(String input) {
-            return eventoRepository.buscar(input);
-        }
-    });
-
     public EventosViewModel(@NonNull Application application) {
         super(application);
 
@@ -55,10 +48,19 @@ public class EventosViewModel extends AndroidViewModel {
         eventoRepository.eliminar(evento);
     }
 
+    // Cada vez que cambia la variable terminoBusqueda se ejecuta el switchMap y lo que retorna se guarda en resultadoBusqueda
+    LiveData<List<Evento>> resultadoBusqueda = Transformations.switchMap(terminoBusqueda, new Function<String, LiveData<List<Evento>>>() {
+        @Override
+        public LiveData<List<Evento>> apply(String input) {
+            return eventoRepository.buscar(input);
+        }
+    });
+
     LiveData<List<Evento>> buscar(){
         return resultadoBusqueda;
     }
 
+    // Este metodo cambia el valor de la variable terminoBusqueda
     void establecerTerminoBusqueda(String t){
         terminoBusqueda.setValue(t);
     }

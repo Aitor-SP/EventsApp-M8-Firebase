@@ -3,9 +3,9 @@ package com.example.eventsapp;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
 import com.bumptech.glide.Glide;
 import com.example.eventsapp.databinding.FragmentInicioBinding;
 import com.example.eventsapp.databinding.ViewholderEventoBinding;
@@ -64,16 +63,19 @@ public class InicioFragment extends Fragment {
             }
         }).attachToRecyclerView(binding.recyclerView);
 
+        // Cuando se busque algo se establece el TerminoBusqueda
         binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) { return false; }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                // Cuando aun no se ha buscado se establece un TerminoBusqueda vacio
                 eventosViewModel.establecerTerminoBusqueda("");
                 return false;
             }
         });
+        // Se observa la variable resultadoBusqueda para mostrarla en el RecyclerView
         eventosViewModel.resultadoBusqueda.observe(getViewLifecycleOwner(), eventos -> {
             eventosAdapter.setEventoList(eventos);
         });
@@ -81,7 +83,7 @@ public class InicioFragment extends Fragment {
 
     // NO CONSIGO QUE FUNCIONEEEFOEWNJOFEWJFOEWJIEOFIJEWOIJ
     LiveData<List<Evento>> resultadoBusqueda() {
-        return eventosViewModel.obtenerEventos();
+        return resultadoBusqueda();
     }
 
     class EventosAdapter extends RecyclerView.Adapter<EventoViewHolder> {
